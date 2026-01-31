@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "custom": true
+    },
+    "spacing": {
+      "customPadding": true,
+      "customMargin": true
+    },
+    "typography": {
+      "customFontSize": true
+    }
+  }
+}
