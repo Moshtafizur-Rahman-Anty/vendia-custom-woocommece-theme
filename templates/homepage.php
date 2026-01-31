@@ -9,6 +9,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main site-homepage">
+	<div class="container">
 
 	<!-- Hero / Intro -->
 	<section class="home-hero">
@@ -48,14 +49,14 @@ get_header();
 
 	<!-- Category Highlight (example: hoodies) -->
 	<section class="home-section home-category">
-		<h2><?php esc_html_e( 'Shop Hoodies', 'vendia' ); ?></h2>
+		<h2><?php esc_html_e( 'Shop Gears', 'vendia' ); ?></h2>
 		<?php
 		echo do_shortcode(
-			'[product_category category="hoodies" limit="4" columns="4"]'
+			'[product_category category="gear" limit="4" columns="4"]'
 		);
 		?>
 	</section>
-
+    </div>
 </main>
 
 <?php
