@@ -1,0 +1,20 @@
+/* ================================
+   Editor Content Spacing
+================================ */
+
+.editor-styles-wrapper {
+	padding: 2rem;
+	box-sizing: border-box;
+}
+
+.editor-styles-wrapper .wp-block {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.editor-post-title__block {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
