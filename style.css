@@ -1,8 +1,7 @@
 /*
 Theme Name: Vendia
-Theme URI: 
 Author: Moshtafizur
-Author URI: 
+Author URI: https://www.linkedin.com/in/moshtafizur/
 Description: Complete premium WooCommerce WordPress theme - Fixed version with all issues resolved.
 Version: 1.0.3
 License: GPL v2 or later
@@ -11,6 +10,9 @@ Text Domain: vendia
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
+Tags: e-commerce, custom-background, custom-logo, custom-menu, featured-images
+Copyright: © 2026 Moshtafizur
+
 */
 
 /* ================================
@@ -181,6 +183,44 @@ blockquote {
 	padding-bottom: var(--spacing-4xl);
 	min-height: 60vh;
 }
+
+/* WordPress core classes */
+.alignleft { float: left; margin-right: 1.5em; }
+.alignright { float: right; margin-left: 1.5em; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+.wp-caption { max-width: 100%; }
+.wp-caption-text { font-size: 0.875rem; }
+
+.sticky { font-weight: bold; }
+.bypostauthor { }
+
+.screen-reader-text {
+	position: absolute;
+	left: -9999px;
+}
+
+
+/* WordPress core classes */
+.alignleft { float: left; margin-right: 1.5em; }
+.alignright { float: right; margin-left: 1.5em; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+.wp-caption {
+	max-width: 100%;
+	font-size: 0.9rem;
+}
+
+.wp-caption-text,
+.gallery-caption {
+	text-align: center;
+	color: #666;
+}
+
+.sticky { }
+.bypostauthor { }
+
+
 
 /* ================================
     Header & Navigation
