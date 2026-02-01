@@ -142,3 +142,44 @@ Vendia follows accessibility best practices:
 
 ```bash
 wp-content/themes/vendia
+
+- Activate it  
+- Install WooCommerce  
+- Customize via **Appearance → Customize**
+
+---
+
+## 🔧 Developer Notes
+
+Vendia is intentionally built as a **classic theme**, not a block theme.
+
+**Reasons:**
+
+- Stability  
+- Predictable rendering  
+- Easier WooCommerce integration  
+- Better long-term maintenance  
+
+---
+
+## 🗺 Roadmap
+
+- **v1.1** – Additional homepage layout options  
+- **v1.2** – Optional child theme starter  
+- **v1.3** – Performance refinements  
+
+---
+
+## 📜 License
+
+**GPL v2 or later**
+
+You are free to use, modify, and distribute this theme.
+
+---
+
+## 👤 Author
+
+Developed by **Moshtafizur**  
+Built with WordPress best practices and WooCommerce standards
+
