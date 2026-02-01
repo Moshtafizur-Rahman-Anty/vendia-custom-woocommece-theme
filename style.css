@@ -263,6 +263,70 @@ blockquote {
 	transform: translateX(-50%) scaleX(1);
 }
 
+#site-navigation {
+    margin-top: -26px;
+}
+
+
+/* =========================
+   Header Cart (WooCommerce)
+========================= */
+
+.header-cart {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.header-cart .cart-link {
+	position: relative;
+	display: flex;
+	align-items: center;
+	color: #111;
+	text-decoration: none;
+}
+
+.header-cart .cart-link:hover {
+	opacity: 0.85;
+}
+
+.site-header,
+.site-header-inner {
+	overflow: visible !important;
+}
+
+
+/* Cart count badge */
+.header-cart .cart-count {
+	position: absolute;
+	top: -6px;
+	right: -14px;
+	background-color: #000;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	pointer-events: none;
+}
+
+.site-header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.site-header {
+	overflow: visible;
+}
+
+
+
+
 /* ================================
    Breadcrumbs
 ================================ */
