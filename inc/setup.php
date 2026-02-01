@@ -1,40 +1,56 @@
 <?php
 /**
- * Theme setup
+ * Enqueue Scripts and Styles
+ *
+ * Handles the registration and enqueuing of all theme stylesheets and scripts
+ * for the front-end of the website.
  *
  * @package Vendia
+ * @since   1.0.0
  */
 
+// Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function vendia_setup() {
+/**
+ * Enqueue theme styles and scripts.
+ *
+ * Registers and enqueues the main theme stylesheet and any additional
+ * JavaScript files needed for the front-end functionality.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function vendia_enqueue_assets() {
 
-	load_theme_textdomain( 'vendia', VENDIA_DIR . '/languages' );
+	// Enqueue main theme stylesheet.
+	wp_enqueue_style(
+		'vendia-style',
+		get_stylesheet_uri(),
+		array(),
+		VENDIA_VERSION,
+		'all'
+	);
 
-	add_theme_support( 'title-tag' );
-	add_theme_support( 'post-thumbnails' );
-	add_theme_support( 'html5', [
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-		'script',
-		'style',
-	] );
+	// Add RTL support for the main stylesheet.
+	wp_style_add_data( 'vendia-style', 'rtl', 'replace' );
 
-	add_theme_support( 'responsive-embeds' );
-	add_theme_support( 'align-wide' );
+	// Enqueue main theme JavaScript (if you have a main.js file).
+	// wp_enqueue_script(
+	// 	'vendia-scripts',
+	// 	get_template_directory_uri() . '/assets/js/main.js',
+	// 	array( 'jquery' ),
+	// 	VENDIA_VERSION,
+	// 	true
+	// );
 
-	register_nav_menus( [
-		'primary' => __( 'Primary Menu', 'vendia' ),
-		'footer'  => __( 'Footer Menu', 'vendia' ),
-	] );
+	// Enqueue comment reply script on singular posts/pages with comments open.
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
 }
-add_action( 'after_setup_theme', 'vendia_setup' );
-
-add_theme_support( 'editor-styles' );
-
-add_editor_style( 'editor-style.css' );
+add_action( 'wp_enqueue_scripts', 'vendia_enqueue_assets' );
