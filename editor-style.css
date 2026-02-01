@@ -1,20 +1,155 @@
-/* ================================
-   Editor Content Spacing
-================================ */
+/* =========================================================
+   VENDIA – FINAL GUTENBERG EDITOR STYLES
+========================================================= */
+
+/* -------------------------------
+   HARD RESET (fix opacity + gray)
+-------------------------------- */
+
+.editor-styles-wrapper,
+.editor-styles-wrapper * {
+	opacity: 1 !important;
+	color: #111 !important;
+}
+
+/* -------------------------------
+   ROOT CANVAS (THIS IS KEY)
+-------------------------------- */
 
 .editor-styles-wrapper {
-	padding: 2rem;
+	background: #fff !important;
+	font-family: inherit;
+	line-height: 1.75;
+}
+
+.block-editor-rich-text__editable {
+	font-size: 20px !important;
+}
+
+/* Kill Gutenberg inner padding */
+.editor-styles-wrapper .block-editor-writing-flow {
+	padding: 0 !important;
+}
+
+/* -------------------------------
+   CONTENT WIDTH + SAFE PADDING
+-------------------------------- */
+
+.editor-styles-wrapper .editor-post-title,
+.editor-styles-wrapper .editor-post-title__block,
+.editor-styles-wrapper .wp-block-post-content,
+.editor-styles-wrapper .is-root-container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 3rem;          /* ⬅ FIXES LEFT TOUCHING */
+	padding-right: 3rem;
 	box-sizing: border-box;
 }
 
-.editor-styles-wrapper .wp-block {
-	max-width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
+/* -------------------------------
+   POST TITLE (FIX SIZE + ALIGN)
+-------------------------------- */
+
+.editor-post-title__input {
+	font-size: 2.8rem !important;
+	line-height: 1.2;
+	font-weight: 700;
+	color: #111 !important;
 }
 
-.editor-post-title__block {
-	max-width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
+/* -------------------------------
+   PARAGRAPHS
+-------------------------------- */
+
+.editor-styles-wrapper p {
+	font-size: 1.05rem;          /* ≈ 21px */
+	line-height: 1.75;
+	margin-bottom: 1.4rem;
 }
+
+/* -------------------------------
+   HEADINGS (PROPER SCALE)
+-------------------------------- */
+
+.editor-styles-wrapper h1 {
+	font-size: 2.4rem;
+	line-height: 1.25;
+	margin-bottom: 1.1rem;
+}
+
+.editor-styles-wrapper h2 {
+	font-size: 1.9rem;
+	line-height: 1.3;
+	margin-bottom: 1rem;
+}
+
+.editor-styles-wrapper h3 {
+	font-size: 1.55rem;
+	line-height: 1.35;
+	margin-bottom: 0.85rem;
+}
+
+.editor-styles-wrapper h4 {
+	font-size: 1.3rem;
+	line-height: 1.4;
+	margin-bottom: 0.75rem;
+}
+
+/* -------------------------------
+   LISTS
+-------------------------------- */
+
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
+	margin-left: 1.5rem;
+	margin-bottom: 1.4rem;
+}
+
+.editor-styles-wrapper li {
+	line-height: 1.7;
+}
+
+/* -------------------------------
+   LINKS
+-------------------------------- */
+
+.editor-styles-wrapper a {
+	color: #000;
+	text-decoration: underline;
+}
+
+/* -------------------------------
+   BLOCK SPACING
+-------------------------------- */
+
+.editor-styles-wrapper .wp-block {
+	margin-bottom: 1.75rem;
+}
+
+/* -------------------------------
+   QUOTES
+-------------------------------- */
+
+.editor-styles-wrapper blockquote {
+	border-left: 4px solid #000;
+	padding-left: 1.25rem;
+	font-style: italic;
+	color: #333 !important;
+}
+
+/* -------------------------------
+   BUTTONS (EDITOR PREVIEW)
+-------------------------------- */
+
+.editor-styles-wrapper .wp-block-button__link {
+	background: #000;
+	color: #fff !important;
+	padding: 0.85rem 1.75rem;
+	border-radius: 6px;
+	font-size: 0.95rem;
+}
+
+/* =========================================================
+   END – VENDIA EDITOR STYLES
+========================================================= */

@@ -29,5 +29,16 @@ function vendia_theme_setup() {
 		'vendia',
 		get_template_directory() . '/languages'
 	);
+
+
+
 }
 add_action( 'after_setup_theme', 'vendia_theme_setup' );
+
+
+function vendia_editor_styles() {
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'editor-style.css' );
+}
+add_action( 'after_setup_theme', 'vendia_editor_styles' );
+
