@@ -140,7 +140,6 @@ Vendia follows accessibility best practices:
 
 ## 📦 Installation
 
-```bash
 wp-content/themes/vendia
 
 - Activate it  
